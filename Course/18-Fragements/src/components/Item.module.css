@@ -1,0 +1,9 @@
+.kgItem {
+  background-color: khaki !important;
+}
+
+.kgSpan {
+  font-weight: 500;
+  font-size: xx-large;
+  color: red;
+}
