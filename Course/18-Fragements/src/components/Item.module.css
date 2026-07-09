@@ -1,9 +1,14 @@
 .kgItem {
-  background-color: khaki !important;
+  background-color: white !important;
 }
 
 .kgSpan {
   font-weight: 500;
   font-size: xx-large;
   color: red;
+}
+.buttons {
+  border-radius: 5px;
+  background-color: green;
+  float: right;
 }

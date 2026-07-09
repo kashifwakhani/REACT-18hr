@@ -4,20 +4,16 @@ import "./App.css";
 import Fooditems from "./components/Fooditems";
 import ErrorMessage from "./components/ErrorMessage";
 import Container from "./components/Container";
+import Foodinput from "./components/Foodinput";
 
 function App() {
   const foodItems = [
     "Apple",
-    "Banana",
-    "Spinach",
-    "Broccoli",
+
     "Carrot",
     "Oats",
     "Brown Rice",
     "Quinoa",
-    "Almonds",
-    "Walnuts",
-    "Greek Yogurt",
     "Eggs",
     "Salmon",
     "Avocado",
@@ -31,6 +27,7 @@ function App() {
           <h1 className="food-heading">Healthy Foods</h1>
         </Container>
         <ErrorMessage items={foodItems} />
+        <Foodinput />
         <Fooditems items={foodItems} />
       </Container>
       <Container>
