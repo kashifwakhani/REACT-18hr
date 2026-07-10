@@ -7,18 +7,12 @@ import Container from "./components/Container";
 import Foodinput from "./components/Foodinput";
 
 function App() {
-  const foodItems = [
-    "Apple",
+  const foodItems = ["Apple", "Carrot", "Oats"];
 
-    "Carrot",
-    "Oats",
-    "Brown Rice",
-    "Quinoa",
-    "Eggs",
-    "Salmon",
-    "Avocado",
-    "Sweet Potato",
-  ];
+  const handleOnchange = (event) => {
+    console.log(foodItems);
+    foodItems.push(event.target.value);
+  };
 
   return (
     <>
@@ -27,7 +21,7 @@ function App() {
           <h1 className="food-heading">Healthy Foods</h1>
         </Container>
         <ErrorMessage items={foodItems} />
-        <Foodinput />
+        <Foodinput handleOnchange={handleOnchange} />
         <Fooditems items={foodItems} />
       </Container>
       <Container>
