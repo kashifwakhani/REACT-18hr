@@ -1,12 +1,16 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import styles from "./Todoitems.module.css";
 
-const TodoItems = ({ todoItem }) => {
+const TodoItems = ({ todoItem, oncDeleteClicked }) => {
   return (
-    <div className={styles["items-container"]}>
-      {todoItem.map((item, index) => (
-        <TodoItem key={index} todoDate={item.dueDate} todoName={item.name} />
+    <div className="items-container">
+      {todoItem.map((items, index) => (
+        <TodoItem
+          oncDeleteClicked={oncDeleteClicked}
+          key={index}
+          todoDate={items.dueDate}
+          todoName={items.name}
+        />
       ))}
     </div>
   );

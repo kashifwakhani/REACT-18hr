@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./TodoItem.module.css";
 
-const TodoItem = ({ todoName, todoDate }) => {
+const TodoItem = ({ todoDate, todoName, oncDeleteClicked }) => {
+  // const [itemsNametoDelete, setitemsNametoDelete] = useState(todoName);
+  // const [itemsNametoDelete, setitemsNametoDelete] = useState(todoDate);
   return (
     <div className="container">
       <div className="row kg-row">
@@ -11,8 +13,9 @@ const TodoItem = ({ todoName, todoDate }) => {
           <button
             type="button"
             className={`btn btn-danger ${styles["kg-button"]}`}
+            onClick={() => oncDeleteClicked(todoName)}
           >
-            Warning
+            DELETE
           </button>
         </div>
       </div>
