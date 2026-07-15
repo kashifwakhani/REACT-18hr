@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./TodoItem.module.css";
 
+import { MdDelete } from "react-icons/md";
 const TodoItem = ({ todoDate, todoName, oncDeleteClicked }) => {
   // const [itemsNametoDelete, setitemsNametoDelete] = useState(todoName);
   // const [itemsNametoDelete, setitemsNametoDelete] = useState(todoDate);
@@ -15,7 +16,7 @@ const TodoItem = ({ todoDate, todoName, oncDeleteClicked }) => {
             className={`btn btn-danger ${styles["kg-button"]}`}
             onClick={() => oncDeleteClicked(todoName)}
           >
-            DELETE
+            <MdDelete />
           </button>
         </div>
       </div>
