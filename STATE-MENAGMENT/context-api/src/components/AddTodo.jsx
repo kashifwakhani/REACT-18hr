@@ -1,9 +1,11 @@
 import React, { useContext, useRef, useState } from "react";
 import { IoIosAdd } from "react-icons/io";
 import TodoItemContext from "../store/TodoItemContext";
+import TodoItemsContextProvider from "../store/TodoItemContext";
+// import TodoItemsContextProvider from "../store/TodoItemContext";
 
 const AddTodo = () => {
-  const { addNewItem } = useContext(TodoItemContext);
+  const { addNewItem } = useContext(TodoItemsContextProvider);
   const todoNameElement = useRef();
   const dueDateElement = useRef();
 
